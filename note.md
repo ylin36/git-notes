@@ -45,6 +45,13 @@ Date:   Tue May 17 21:38:52 2022 -0400
 
     add notes
 ```
+unstage files from prev git add .
 ```
 git reset
+```
+If you want to modify or update your changes from the previous commit but don’t want to remove them completely
+
+The --soft flag changes the state of the committed files to “staged."
+```
+git reset --soft HEAD~
 ```
