@@ -51,9 +51,55 @@ git reset
 ```
 If you want to modify or update your changes from the previous commit but don’t want to remove them completely
 
-The --soft flag changes the state of the committed files to “staged.". this works if current branch is g
+The --soft flag changes the state of the committed files to “staged.". this seems to work if HEAD~
+
+git reset --soft HEAD~ is used. which resets all commit back to stage that's diff from current branch and the source branch.
 ```
-git reset --soft HEAD~
+E:\git\git-notes>git log
+commit bf97995ea9a7186f3b4a5c18ddb4fdbebc457662 (HEAD -> test)
+Author: Yang Lin <ylin366@gmail.com>
+Date:   Tue May 17 21:57:12 2022 -0400
+
+    test 4
+
+commit 0b30b41318e4acb905aaf179df73af556038f3f8 (master)
+Author: Yang Lin <ylin366@gmail.com>
+Date:   Tue May 17 21:53:47 2022 -0400
+
+    phase2
+
+commit d64d3d17b737ffab51693d6fff3a3d6a27ba0fb2
+Author: Yang Lin <ylin366@gmail.com>
+Date:   Tue May 17 21:44:49 2022 -0400
+
+    next changepoint
+
+commit 01f16df373329d61d3bce5e219c2a1591fc55eef
+Author: Yang Lin <ylin366@gmail.com>
+Date:   Tue May 17 21:38:52 2022 -0400
+
+    add notes
+
+E:\git\git-notes>git reset --soft HEAD~
+
+E:\git\git-notes>git log
+commit 0b30b41318e4acb905aaf179df73af556038f3f8 (HEAD -> test, master)
+Author: Yang Lin <ylin366@gmail.com>
+Date:   Tue May 17 21:53:47 2022 -0400
+
+    phase2
+
+commit d64d3d17b737ffab51693d6fff3a3d6a27ba0fb2
+Author: Yang Lin <ylin366@gmail.com>
+Date:   Tue May 17 21:44:49 2022 -0400
+
+    next changepoint
+
+commit 01f16df373329d61d3bce5e219c2a1591fc55eef
+Author: Yang Lin <ylin366@gmail.com>
+Date:   Tue May 17 21:38:52 2022 -0400
+
+    add notes
 ```
 
 test4
