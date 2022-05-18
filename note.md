@@ -1,4 +1,42 @@
-## git snapshots
+- [git works in snapshots](#git-works-in-snapshots)
+- [git states](#git-states)
+- [git config](#git-config)
+- [git init/add/commit](#git-initaddcommit)
+- [git log](#git-log)
+- [git reset](#git-reset)
+  - [--soft](#--soft)
+  - [-hard](#-hard)
+  - [HEAD~#](#head)
+- [branch](#branch)
+  - [checkout](#checkout)
+  - [branch then checkout](#branch-then-checkout)
+  - [renaming current branch](#renaming-current-branch)
+  - [renaming branch without switching over](#renaming-branch-without-switching-over)
+  - [deleting branch](#deleting-branch)
+- [stash](#stash)
+- [git merge](#git-merge)
+  - [merge conflicts](#merge-conflicts)
+  - [resolve merge conflict](#resolve-merge-conflict)
+- [remote repo](#remote-repo)
+  - [.gitignore](#gitignore)
+  - [add remote and alias](#add-remote-and-alias)
+  - [git push](#git-push)
+  - [git clone](#git-clone)
+  - [shallow clone](#shallow-clone)
+  - [git fetch](#git-fetch)
+  - [git pull](#git-pull)
+- [git revert](#git-revert)
+- [Pull request](#pull-request)
+- [git rebase](#git-rebase)
+  - [rebase conflicts](#rebase-conflicts)
+  - [rebase vs merge](#rebase-vs-merge)
+  - [When should you use merge vs rebase?](#when-should-you-use-merge-vs-rebase)
+- [other notable items during Pull Request (Taken from bitbucket)](#other-notable-items-during-pull-request-taken-from-bitbucket)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+## git works in snapshots
 * state of the project files at a given time. 
 * instead of maintaining record of file-based changes, git stores it as snapshot (entire state of the proj at that moment).
 * while saving snapshot, it keeps files that did not get updated, and only keep references of files that didn't change from prev snapshot to avoid dupes.
