@@ -10,7 +10,6 @@
 |file1 v1|file2 v2|
 |file2 v1 |file2 v2|
 file3 v1|->|
-```
 
 ## git states
 1) Modified - files that have changed, but not yet marked by git. Won't be part of next snapshot
@@ -29,4 +28,23 @@ git init
 git add .
 
 git status
+
+git commit -m "message"
+```
+
+git log to view commit history sorted based on time of creation. desc.
+commit hash is sha-1. hashkey keeps integrity of the commit
+
+```
+git log
+
+E:\git\git-notes>git log
+commit 01f16df373329d61d3bce5e219c2a1591fc55eef (HEAD -> master)
+Author: Yang Lin <ylin366@gmail.com>
+Date:   Tue May 17 21:38:52 2022 -0400
+
+    add notes
+```
+```
+git reset
 ```
